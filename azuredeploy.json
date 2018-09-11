@@ -15,6 +15,12 @@
                 "description": "Administrator password for the local admin account"
             }
         },
+        "virtualMachineImageResourceID": {
+            "type": "string",
+            "metadata": {
+                "description": "Resource ID for your Virtual Machine Image"
+            }
+        },
         "virtualMachineNamePrefix": {
             "defaultValue": "LabVM0",
             "type": "string",
@@ -142,7 +148,7 @@
                 },
                 "storageProfile": {
                     "imageReference": {
-                        "id": "/subscriptions/225722ac-305d-48ad-97f9-f2f80132b535/resourceGroups/w10/providers/Microsoft.Compute/images/w10imageAIRS-image-20180831210838"
+                        "id": "[parameters('virtualMachineImageResourceID')]"
                     },
                     "osDisk": {
                         "createOption": "FromImage",
